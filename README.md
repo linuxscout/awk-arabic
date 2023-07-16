@@ -34,6 +34,15 @@ print('|'.join(repru))
 \xd9\x8b|\xd9\x8c|\xd9\x8d|\xd9\x8e|\xd9\x8f|\xd9\x90|\xd9\x91|\xd9\x92|\xd9\xb0
 ```
 
+
+
+### حذف التطويل
+
+رمز التطويل في يونيكود هو u0640
+```awk
+echo "1 **:-أحـــب:.*,5;" | awk '{ gsub(/\xd9\x80/, ""); print }'
+```
+
 ### convert multiline record  to csv
 
 FS = field separator
